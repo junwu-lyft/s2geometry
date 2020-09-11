@@ -116,11 +116,13 @@
 #include <iostream>
 #include <string>
 
-#include <openssl/bn.h>
-
 #include "s2/base/integral_types.h"
 #include "s2/base/logging.h"
 #include "s2/base/port.h"
+
+#include "s2/util/math/exactfloat/bigint.h"
+
+typedef BigInt BIGNUM;
 
 class ExactFloat {
  public:
@@ -500,38 +502,6 @@ class ExactFloat {
   friend ExactFloat logb(const ExactFloat& a);
 
  protected:
-  // OpenSSL >= 1.1 does not have BN_init, and does not support stack-
-  // allocated BIGNUMS.  We use BN_init when possible, but BN_new otherwise.
-  // If the performance penalty is too high, an object pool can be added
-  // in the future.
-#if defined(OPENSSL_IS_BORINGSSL) || OPENSSL_VERSION_NUMBER < 0x10100000L
-  // BoringSSL and OpenSSL < 1.1 support stack allocated BIGNUMs and BN_init.
-  class BigNum {
-   public:
-    BigNum() { BN_init(&bn_); }
-    // Prevent accidental, expensive, copying.
-    BigNum(const BigNum&) = delete;
-    BigNum& operator=(const BigNum&) = delete;
-    ~BigNum() { BN_free(&bn_); }
-    BIGNUM* get() { return &bn_; }
-    const BIGNUM* get() const { return &bn_; }
-   private:
-    BIGNUM bn_;
-  };
-#else
-  class BigNum {
-   public:
-    BigNum() : bn_(BN_new()) {}
-    BigNum(const BigNum&) = delete;
-    BigNum& operator=(const BigNum&) = delete;
-    ~BigNum() { BN_free(bn_); }
-    BIGNUM* get() { return bn_; }
-    const BIGNUM* get() const { return bn_; }
-   private:
-    BIGNUM* bn_;
-  };
-#endif
-
   // Non-normal numbers are represented using special exponent values and a
   // mantissa of zero.  Do not change these values; methods such as
   // is_normal() make assumptions about their ordering.  Non-normal numbers
@@ -546,7 +516,7 @@ class ExactFloat {
   //  - bn_exp_ is the base-2 exponent applied to bn_.
   int32 sign_;
   int32 bn_exp_;
-  BigNum bn_;
+  BIGNUM bn_;
 
   // A standard IEEE "double" has a 53-bit mantissa consisting of a 52-bit
   // fraction plus an implicit leading "1" bit.

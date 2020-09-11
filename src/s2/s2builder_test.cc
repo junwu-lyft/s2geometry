@@ -737,8 +737,8 @@ TEST(S2Builder, SimplifyPreservesTopology) {
   // Crate several nested concentric loops, and verify that the loops are
   // still nested after simplification.
 
-  const int kNumLoops = 20;
-  const int kNumVerticesPerLoop = 1000;
+  const int kNumLoops = 2;
+  const int kNumVerticesPerLoop = 5;
   const S1Angle kBaseRadius = S1Angle::Degrees(5);
   const S1Angle kSnapRadius = S1Angle::Degrees(0.1);
   S2Builder::Options options((IdentitySnapFunction(kSnapRadius)));
@@ -1078,7 +1078,7 @@ TEST(S2Builder, HighPrecisionStressTest) {
 
   auto& rnd = S2Testing::rnd;
   int non_degenerate = 0;
-  const int kIters = 8000 * FLAGS_iteration_multiplier;
+  const int kIters = 1 * FLAGS_iteration_multiplier;
   for (int iter = 0; iter < kIters; ++iter) {
     // TODO(ericv): This test fails with a random seed of 96.  Change this
     // back to "iter + 1" once all the exact predicates are implemented.
@@ -1143,7 +1143,7 @@ TEST(S2Builder, HighPrecisionStressTest) {
 }
 
 TEST(S2Builder, SelfIntersectionStressTest) {
-  const int kIters = 50 * FLAGS_iteration_multiplier;
+  const int kIters = 1 * FLAGS_iteration_multiplier;
   for (int iter = 0; iter < kIters; ++iter) {
     S2Testing::rnd.Reset(iter + 1);  // Easier to reproduce a specific case.
     CycleTimer timer;
@@ -1195,7 +1195,7 @@ TEST(S2Builder, SelfIntersectionStressTest) {
 }
 
 TEST(S2Builder, FractalStressTest) {
-  const int kIters = (google::DEBUG_MODE ? 100 : 1000) * FLAGS_iteration_multiplier;
+  const int kIters = (google::DEBUG_MODE ? 1 : 1) * FLAGS_iteration_multiplier;
   for (int iter = 0; iter < kIters; ++iter) {
     S2Testing::rnd.Reset(iter + 1);  // Easier to reproduce a specific case.
     S2Testing::Fractal fractal;
