@@ -25,15 +25,15 @@ add_feature_info(GFLAGS WITH_GFLAGS
                  "allows changing command line flags.")
 
 # glog option can only be turned on if gflags is on.
-cmake_dependent_option(WITH_GLOG "Use glog for logging." ON
+cmake_dependent_option(WITH_GLOG "Use glog for logging." OFF
                        "WITH_GFLAGS" OFF)
 add_feature_info(GLOG WITH_GLOG "provides logging configurability.")
 
-option(BUILD_SHARED_LIBS "Build shared libraries instead of static." ON)
+option(BUILD_SHARED_LIBS "Build shared libraries instead of static." OFF)
 add_feature_info(SHARED_LIBS BUILD_SHARED_LIBS
                  "builds shared libraries instead of static.")
 
-option(BUILD_EXAMPLES "Build s2 documentation examples." ON)
+option(BUILD_EXAMPLES "Build s2 documentation examples." OFF)
 
 feature_summary(WHAT ALL)
 
@@ -196,10 +196,10 @@ add_library(s2
             src/s2/util/math/exactfloat/exactfloat.cc
             src/s2/util/math/mathutil.cc
             src/s2/util/units/length-units.cc)
-add_library(s2testing STATIC
-            src/s2/s2builderutil_testing.cc
-            src/s2/s2shapeutil_testing.cc
-            src/s2/s2testing.cc)
+#add_library(s2testing STATIC
+#            src/s2/s2builderutil_testing.cc
+#            src/s2/s2shapeutil_testing.cc
+#            src/s2/s2testing.cc)
 target_link_libraries(
     s2
     ${GFLAGS_LIBRARIES} ${GLOG_LIBRARIES} 
@@ -405,7 +405,7 @@ install(FILES src/s2/util/math/mathutil.h
 install(FILES src/s2/util/units/length-units.h
               src/s2/util/units/physical-units.h
         DESTINATION include/s2/util/units)
-install(TARGETS s2 s2testing DESTINATION lib)
+# install(TARGETS s2 s2testing DESTINATION lib)
 
 message("GTEST_ROOT: ${GTEST_ROOT}")
 if (GTEST_ROOT)
