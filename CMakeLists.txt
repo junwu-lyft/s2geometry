@@ -179,11 +179,11 @@ add_library(s2
             src/s2/s2predicates.cc
             src/s2/s2projections.cc
             src/s2/s2r2rect.cc
-            src/s2/s2region.cc
-            src/s2/s2region_term_indexer.cc
-            src/s2/s2region_coverer.cc
-            src/s2/s2region_intersection.cc
-            src/s2/s2region_union.cc
+#            src/s2/s2region.cc
+#            src/s2/s2region_term_indexer.cc
+#            src/s2/s2region_coverer.cc
+#            src/s2/s2region_intersection.cc
+#            src/s2/s2region_union.cc
             src/s2/s2shape_index.cc
             src/s2/s2shape_index_buffered_region.cc
             src/s2/s2shape_index_measures.cc
@@ -316,11 +316,11 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2predicates.h
               src/s2/s2projections.h
               src/s2/s2r2rect.h
-              src/s2/s2region.h
-              src/s2/s2region_term_indexer.h
-              src/s2/s2region_coverer.h
-              src/s2/s2region_intersection.h
-              src/s2/s2region_union.h
+#              src/s2/s2region.h
+#              src/s2/s2region_term_indexer.h
+#              src/s2/s2region_coverer.h
+#              src/s2/s2region_intersection.h
+#              src/s2/s2region_union.h
               src/s2/s2shape.h
               src/s2/s2shape_index.h
               src/s2/s2shape_index_buffered_region.h
