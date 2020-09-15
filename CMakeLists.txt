@@ -171,7 +171,7 @@ add_library(s2
             src/s2/s2point_compression.cc
             src/s2/s2point_region.cc
             src/s2/s2pointutil.cc
-            src/s2/s2polygon.cc
+#            src/s2/s2polygon.cc
             src/s2/s2polyline.cc
             src/s2/s2polyline_alignment.cc
             src/s2/s2polyline_measures.cc
@@ -308,7 +308,7 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2point_region.h
               src/s2/s2point_span.h
               src/s2/s2pointutil.h
-              src/s2/s2polygon.h
+#              src/s2/s2polygon.h
               src/s2/s2polyline.h
               src/s2/s2polyline_alignment.h
               src/s2/s2polyline_measures.h
