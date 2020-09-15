@@ -196,7 +196,7 @@ TEST(S2EdgeUtil, Crossings) {
 }
 
 TEST(S2EdgeUtil, CollinearEdgesThatDontTouch) {
-  const int kIters = 5;
+  const int kIters = 500;
   for (int iter = 0; iter < kIters; ++iter) {
     S2Point a = S2Testing::RandomPoint();
     S2Point d = S2Testing::RandomPoint();
@@ -228,7 +228,7 @@ TEST(S2EdgeUtil, CoincidentZeroLengthEdgesThatDontTouch) {
   // obvious, since it depends on the particular symbolic perturbations used
   // by s2pred::Sign().  It would be better to replace this with a test that
   // says that the CCW results must be consistent with each other.)
-  const int kIters = 5;
+  const int kIters = 1000;
   for (int iter = 0; iter < kIters; ++iter) {
     // Construct a point P where every component is zero or a power of 2.
     S2Point p;

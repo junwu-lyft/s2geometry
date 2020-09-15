@@ -33,8 +33,7 @@ TEST(S1ChordAngle, DefaultConstructor) {
 }
 
 TEST(S1ChordAngle, TwoPointConstructor) {
-  //for (int iter = 0; iter < 100; ++iter) {
-  for (int iter = 0; iter < 10; ++iter) {
+  for (int iter = 0; iter < 100; ++iter) {
     S2Point x, y, z;
     S2Testing::GetRandomFrame(&x, &y, &z);
     EXPECT_EQ(S1Angle::Zero(), S1Angle(S1ChordAngle(z, z)));
@@ -188,8 +187,7 @@ TEST(S1ChordAngle, GetS2PointConstructorMaxError) {
   // Check that the error bound returned by GetS2PointConstructorMaxError() is
   // large enough.
   auto& rnd = S2Testing::rnd;
-  for (int iter = 0; iter < 10; ++iter) {
-//  for (int iter = 0; iter < 100000; ++iter) {
+  for (int iter = 0; iter < 100000; ++iter) {
     rnd.Reset(iter);  // Easier to reproduce a specific case.
     S2Point x = S2Testing::RandomPoint();
     S2Point y = S2Testing::RandomPoint();
