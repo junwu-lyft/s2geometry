@@ -158,11 +158,11 @@ add_library(s2
             src/s2/s2latlng.cc
             src/s2/s2latlng_rect.cc
             src/s2/s2latlng_rect_bounder.cc
-            src/s2/s2lax_loop_shape.cc
-            src/s2/s2lax_polygon_shape.cc
-            src/s2/s2lax_polyline_shape.cc
-            src/s2/s2loop.cc
-            src/s2/s2loop_measures.cc
+#            src/s2/s2lax_loop_shape.cc
+#            src/s2/s2lax_polygon_shape.cc
+#            src/s2/s2lax_polyline_shape.cc
+#            src/s2/s2loop.cc
+#            src/s2/s2loop_measures.cc
             src/s2/s2measures.cc
             src/s2/s2metrics.cc
             src/s2/s2max_distance_targets.cc
@@ -172,10 +172,10 @@ add_library(s2
             src/s2/s2point_region.cc
             src/s2/s2pointutil.cc
 #            src/s2/s2polygon.cc
-            src/s2/s2polyline.cc
-            src/s2/s2polyline_alignment.cc
-            src/s2/s2polyline_measures.cc
-            src/s2/s2polyline_simplifier.cc
+#            src/s2/s2polyline.cc
+#            src/s2/s2polyline_alignment.cc
+#            src/s2/s2polyline_measures.cc
+#            src/s2/s2polyline_simplifier.cc
             src/s2/s2predicates.cc
             src/s2/s2projections.cc
             src/s2/s2r2rect.cc
@@ -291,11 +291,11 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2latlng.h
               src/s2/s2latlng_rect.h
               src/s2/s2latlng_rect_bounder.h
-              src/s2/s2lax_loop_shape.h
-              src/s2/s2lax_polygon_shape.h
-              src/s2/s2lax_polyline_shape.h
-              src/s2/s2loop.h
-              src/s2/s2loop_measures.h
+#              src/s2/s2lax_loop_shape.h
+#              src/s2/s2lax_polygon_shape.h
+#              src/s2/s2lax_polyline_shape.h
+#              src/s2/s2loop.h
+#              src/s2/s2loop_measures.h
               src/s2/s2measures.h
               src/s2/s2metrics.h
               src/s2/s2max_distance_targets.h
@@ -309,10 +309,10 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2point_span.h
               src/s2/s2pointutil.h
 #              src/s2/s2polygon.h
-              src/s2/s2polyline.h
-              src/s2/s2polyline_alignment.h
-              src/s2/s2polyline_measures.h
-              src/s2/s2polyline_simplifier.h
+#              src/s2/s2polyline.h
+#              src/s2/s2polyline_alignment.h
+#              src/s2/s2polyline_measures.h
+#              src/s2/s2polyline_simplifier.h
               src/s2/s2predicates.h
               src/s2/s2projections.h
               src/s2/s2r2rect.h
