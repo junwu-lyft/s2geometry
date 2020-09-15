@@ -123,16 +123,16 @@ add_library(s2
             src/s2/s1chord_angle.cc
             src/s2/s1interval.cc
             src/s2/s2boolean_operation.cc
-            src/s2/s2builder.cc
-            src/s2/s2builder_graph.cc
-            src/s2/s2builderutil_closed_set_normalizer.cc
-            src/s2/s2builderutil_find_polygon_degeneracies.cc
-            src/s2/s2builderutil_lax_polygon_layer.cc
-            src/s2/s2builderutil_s2point_vector_layer.cc
-            src/s2/s2builderutil_s2polygon_layer.cc
-            src/s2/s2builderutil_s2polyline_layer.cc
-            src/s2/s2builderutil_s2polyline_vector_layer.cc
-            src/s2/s2builderutil_snap_functions.cc
+#            src/s2/s2builder.cc
+#            src/s2/s2builder_graph.cc
+#            src/s2/s2builderutil_closed_set_normalizer.cc
+#            src/s2/s2builderutil_find_polygon_degeneracies.cc
+#            src/s2/s2builderutil_lax_polygon_layer.cc
+#            src/s2/s2builderutil_s2point_vector_layer.cc
+#            src/s2/s2builderutil_s2polygon_layer.cc
+#            src/s2/s2builderutil_s2polyline_layer.cc
+#            src/s2/s2builderutil_s2polyline_vector_layer.cc
+#            src/s2/s2builderutil_snap_functions.cc
             src/s2/s2cap.cc
             src/s2/s2cell.cc
             src/s2/s2cell_id.cc
@@ -246,19 +246,19 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s1chord_angle.h
               src/s2/s1interval.h
               src/s2/s2boolean_operation.h
-              src/s2/s2builder.h
-              src/s2/s2builder_graph.h
-              src/s2/s2builder_layer.h
-              src/s2/s2builderutil_closed_set_normalizer.h
-              src/s2/s2builderutil_find_polygon_degeneracies.h
-              src/s2/s2builderutil_graph_shape.h
-              src/s2/s2builderutil_lax_polygon_layer.h
-              src/s2/s2builderutil_s2point_vector_layer.h
-              src/s2/s2builderutil_s2polygon_layer.h
-              src/s2/s2builderutil_s2polyline_layer.h
-              src/s2/s2builderutil_s2polyline_vector_layer.h
-              src/s2/s2builderutil_snap_functions.h
-              src/s2/s2builderutil_testing.h
+#              src/s2/s2builder.h
+#              src/s2/s2builder_graph.h
+#              src/s2/s2builder_layer.h
+#              src/s2/s2builderutil_closed_set_normalizer.h
+#              src/s2/s2builderutil_find_polygon_degeneracies.h
+#              src/s2/s2builderutil_graph_shape.h
+#              src/s2/s2builderutil_lax_polygon_layer.h
+#              src/s2/s2builderutil_s2point_vector_layer.h
+#              src/s2/s2builderutil_s2polygon_layer.h
+#              src/s2/s2builderutil_s2polyline_layer.h
+#              src/s2/s2builderutil_s2polyline_vector_layer.h
+#              src/s2/s2builderutil_snap_functions.h
+#              src/s2/s2builderutil_testing.h
               src/s2/s2cap.h
               src/s2/s2cell.h
               src/s2/s2cell_id.h
@@ -429,6 +429,6 @@ if (BUILD_EXAMPLES)
   add_subdirectory("doc/examples" examples)
 endif()
 
-if (${SWIG_FOUND} AND ${Python3_FOUND})
-  add_subdirectory("src/python" python)
-endif()
+#if (${SWIG_FOUND} AND ${Python3_FOUND})
+#  add_subdirectory("src/python" python)
+#endif()
