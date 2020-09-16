@@ -211,12 +211,12 @@ add_library(s2
 #            src/s2/third_party/absl/strings/string_view.cc
 #            src/s2/third_party/absl/strings/strip.cc
             src/s2/third_party/absl/strings/internal/memutil.cc
-            src/s2/util/bits/bit-interleave.cc
-            src/s2/util/bits/bits.cc
+#            src/s2/util/bits/bit-interleave.cc
+#            src/s2/util/bits/bits.cc
             src/s2/util/coding/coder.cc
             src/s2/util/coding/varint.cc
-            src/s2/util/math/exactfloat/exactfloat.cc
-            src/s2/util/math/mathutil.cc
+#            src/s2/util/math/exactfloat/exactfloat.cc
+#            src/s2/util/math/mathutil.cc
             src/s2/util/units/length-units.cc)
 target_link_libraries(
     s2
@@ -395,8 +395,8 @@ install(FILES src/s2/third_party/absl/types/span.h
         DESTINATION include/s2/third_party/absl/types)
 install(FILES src/s2/third_party/absl/utility/utility.h
         DESTINATION include/s2/third_party/absl/utility)
-install(FILES src/s2/util/bits/bits.h
-        DESTINATION include/s2/util/bits)
+#install(FILES src/s2/util/bits/bits.h
+#        DESTINATION include/s2/util/bits)
 install(FILES src/s2/util/coding/coder.h
               src/s2/util/coding/varint.h
         DESTINATION include/s2/util/coding)
