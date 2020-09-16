@@ -112,11 +112,11 @@ include_directories(src)
 add_library(s2
             src/s2/base/stringprintf.cc
             src/s2/base/strtoint.cc
-            src/s2/encoded_s2cell_id_vector.cc
+#            src/s2/encoded_s2cell_id_vector.cc
 #            src/s2/encoded_s2point_vector.cc
 #            src/s2/encoded_s2shape_index.cc
-            src/s2/encoded_string_vector.cc
-            src/s2/id_set_lexicon.cc
+#            src/s2/encoded_string_vector.cc
+#            src/s2/id_set_lexicon.cc
 #            src/s2/mutable_s2shape_index.cc
             src/s2/r2rect.cc
             src/s2/s1angle.cc
@@ -133,12 +133,12 @@ add_library(s2
 #            src/s2/s2builderutil_s2polyline_layer.cc
 #            src/s2/s2builderutil_s2polyline_vector_layer.cc
 #            src/s2/s2builderutil_snap_functions.cc
-            src/s2/s2cap.cc
+#            src/s2/s2cap.cc
             src/s2/s2cell.cc
             src/s2/s2cell_id.cc
             src/s2/s2cell_index.cc
-            src/s2/s2cell_union.cc
-            src/s2/s2centroids.cc
+#            src/s2/s2cell_union.cc
+#            src/s2/s2centroids.cc
 #            src/s2/s2closest_cell_query.cc
 #            src/s2/s2closest_edge_query.cc
 #            src/s2/s2closest_point_query.cc
@@ -156,8 +156,8 @@ add_library(s2
             src/s2/s2error.cc
 #            src/s2/s2furthest_edge_query.cc
             src/s2/s2latlng.cc
-            src/s2/s2latlng_rect.cc
-            src/s2/s2latlng_rect_bounder.cc
+#            src/s2/s2latlng_rect.cc
+#            src/s2/s2latlng_rect_bounder.cc
 #            src/s2/s2lax_loop_shape.cc
 #            src/s2/s2lax_polygon_shape.cc
 #            src/s2/s2lax_polyline_shape.cc
@@ -167,7 +167,7 @@ add_library(s2
 #            src/s2/s2metrics.cc
 #            src/s2/s2max_distance_targets.cc
 #            src/s2/s2min_distance_targets.cc
-            src/s2/s2padded_cell.cc
+#            src/s2/s2padded_cell.cc
 #            src/s2/s2point_compression.cc
 #            src/s2/s2point_region.cc
 #            src/s2/s2pointutil.cc
@@ -195,8 +195,8 @@ add_library(s2
 #            src/s2/s2shapeutil_get_reference_point.cc
 #            src/s2/s2shapeutil_range_iterator.cc
 #            src/s2/s2shapeutil_visit_crossing_edge_pairs.cc
-            src/s2/s2text_format.cc
-            src/s2/s2wedge_relations.cc
+#            src/s2/s2text_format.cc
+#            src/s2/s2wedge_relations.cc
             src/s2/strings/ostringstream.cc
             src/s2/strings/serialize.cc
             src/s2/third_party/absl/base/dynamic_annotations.cc
@@ -232,12 +232,12 @@ target_include_directories(s2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 # We don't need to install all headers, only those
 # transitively included by s2 headers we are exporting.
 install(FILES src/s2/_fp_contract_off.h
-              src/s2/encoded_s2cell_id_vector.h
+#              src/s2/encoded_s2cell_id_vector.h
 #              src/s2/encoded_s2point_vector.h
 #              src/s2/encoded_s2shape_index.h
-              src/s2/encoded_string_vector.h
-              src/s2/encoded_uint_vector.h
-              src/s2/id_set_lexicon.h
+#              src/s2/encoded_string_vector.h
+#              src/s2/encoded_uint_vector.h
+#              src/s2/id_set_lexicon.h
 #              src/s2/mutable_s2shape_index.h
               src/s2/r1interval.h
               src/s2/r2.h
@@ -259,12 +259,12 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2builderutil_s2polyline_vector_layer.h
 #              src/s2/s2builderutil_snap_functions.h
 #              src/s2/s2builderutil_testing.h
-              src/s2/s2cap.h
+#              src/s2/s2cap.h
               src/s2/s2cell.h
               src/s2/s2cell_id.h
               src/s2/s2cell_index.h
-              src/s2/s2cell_union.h
-              src/s2/s2centroids.h
+#              src/s2/s2cell_union.h
+#              src/s2/s2centroids.h
 #              src/s2/s2closest_cell_query.h
 #              src/s2/s2closest_cell_query_base.h
 #              src/s2/s2closest_edge_query.h
@@ -278,7 +278,7 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2coords.h
 #              src/s2/s2crossing_edge_query.h
               src/s2/s2debug.h
-              src/s2/s2distance_target.h
+#              src/s2/s2distance_target.h
 #              src/s2/s2earth.h
 #              src/s2/s2edge_clipping.h
 #              src/s2/s2edge_crosser.h
@@ -289,8 +289,8 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2error.h
 #              src/s2/s2furthest_edge_query.h
               src/s2/s2latlng.h
-              src/s2/s2latlng_rect.h
-              src/s2/s2latlng_rect_bounder.h
+#              src/s2/s2latlng_rect.h
+#              src/s2/s2latlng_rect_bounder.h
 #              src/s2/s2lax_loop_shape.h
 #              src/s2/s2lax_polygon_shape.h
 #              src/s2/s2lax_polyline_shape.h
@@ -300,7 +300,7 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2metrics.h
 #              src/s2/s2max_distance_targets.h
 #              src/s2/s2min_distance_targets.h
-              src/s2/s2padded_cell.h
+#              src/s2/s2padded_cell.h
 #              src/s2/s2point.h
 #              src/s2/s2point_vector_shape.h
 #              src/s2/s2point_compression.h
@@ -338,10 +338,10 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2shapeutil_testing.h
 #              src/s2/s2shapeutil_visit_crossing_edge_pairs.h
 #              src/s2/s2testing.h
-              src/s2/s2text_format.h
-              src/s2/s2wedge_relations.h
-              src/s2/sequence_lexicon.h
-              src/s2/value_lexicon.h
+#              src/s2/s2text_format.h
+#              src/s2/s2wedge_relations.h
+#              src/s2/sequence_lexicon.h
+#              src/s2/value_lexicon.h
         DESTINATION include/s2)
 install(FILES src/s2/base/casts.h
               src/s2/base/commandlineflags.h
