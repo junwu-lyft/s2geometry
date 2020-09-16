@@ -114,10 +114,10 @@ add_library(s2
             src/s2/base/strtoint.cc
             src/s2/encoded_s2cell_id_vector.cc
 #            src/s2/encoded_s2point_vector.cc
-            src/s2/encoded_s2shape_index.cc
+#            src/s2/encoded_s2shape_index.cc
             src/s2/encoded_string_vector.cc
             src/s2/id_set_lexicon.cc
-            src/s2/mutable_s2shape_index.cc
+#            src/s2/mutable_s2shape_index.cc
             src/s2/r2rect.cc
             src/s2/s1angle.cc
             src/s2/s1chord_angle.cc
@@ -142,17 +142,17 @@ add_library(s2
 #            src/s2/s2closest_cell_query.cc
 #            src/s2/s2closest_edge_query.cc
 #            src/s2/s2closest_point_query.cc
-            src/s2/s2contains_vertex_query.cc
-            src/s2/s2convex_hull_query.cc
+#            src/s2/s2contains_vertex_query.cc
+#            src/s2/s2convex_hull_query.cc
             src/s2/s2coords.cc
-            src/s2/s2crossing_edge_query.cc
+#            src/s2/s2crossing_edge_query.cc
             src/s2/s2debug.cc
 #            src/s2/s2earth.cc
-            src/s2/s2edge_clipping.cc
-            src/s2/s2edge_crosser.cc
-            src/s2/s2edge_crossings.cc
-            src/s2/s2edge_distances.cc
-            src/s2/s2edge_tessellator.cc
+#            src/s2/s2edge_clipping.cc
+#            src/s2/s2edge_crosser.cc
+#            src/s2/s2edge_crossings.cc
+#            src/s2/s2edge_distances.cc
+#            src/s2/s2edge_tessellator.cc
             src/s2/s2error.cc
 #            src/s2/s2furthest_edge_query.cc
             src/s2/s2latlng.cc
@@ -163,10 +163,10 @@ add_library(s2
 #            src/s2/s2lax_polyline_shape.cc
 #            src/s2/s2loop.cc
 #            src/s2/s2loop_measures.cc
-            src/s2/s2measures.cc
-            src/s2/s2metrics.cc
-            src/s2/s2max_distance_targets.cc
-            src/s2/s2min_distance_targets.cc
+#            src/s2/s2measures.cc
+#            src/s2/s2metrics.cc
+#            src/s2/s2max_distance_targets.cc
+#            src/s2/s2min_distance_targets.cc
             src/s2/s2padded_cell.cc
 #            src/s2/s2point_compression.cc
 #            src/s2/s2point_region.cc
@@ -176,25 +176,25 @@ add_library(s2
 #            src/s2/s2polyline_alignment.cc
 #            src/s2/s2polyline_measures.cc
 #            src/s2/s2polyline_simplifier.cc
-            src/s2/s2predicates.cc
-            src/s2/s2projections.cc
-            src/s2/s2r2rect.cc
+#            src/s2/s2predicates.cc
+#            src/s2/s2projections.cc
+#            src/s2/s2r2rect.cc
 #            src/s2/s2region.cc
 #            src/s2/s2region_term_indexer.cc
 #            src/s2/s2region_coverer.cc
 #            src/s2/s2region_intersection.cc
 #            src/s2/s2region_union.cc
-            src/s2/s2shape_index.cc
-            src/s2/s2shape_index_buffered_region.cc
-            src/s2/s2shape_index_measures.cc
-            src/s2/s2shape_measures.cc
-            src/s2/s2shapeutil_build_polygon_boundaries.cc
-            src/s2/s2shapeutil_coding.cc
-            src/s2/s2shapeutil_contains_brute_force.cc
-            src/s2/s2shapeutil_edge_iterator.cc
-            src/s2/s2shapeutil_get_reference_point.cc
-            src/s2/s2shapeutil_range_iterator.cc
-            src/s2/s2shapeutil_visit_crossing_edge_pairs.cc
+#            src/s2/s2shape_index.cc
+#            src/s2/s2shape_index_buffered_region.cc
+#            src/s2/s2shape_index_measures.cc
+#            src/s2/s2shape_measures.cc
+#            src/s2/s2shapeutil_build_polygon_boundaries.cc
+#            src/s2/s2shapeutil_coding.cc
+#            src/s2/s2shapeutil_contains_brute_force.cc
+#            src/s2/s2shapeutil_edge_iterator.cc
+#            src/s2/s2shapeutil_get_reference_point.cc
+#            src/s2/s2shapeutil_range_iterator.cc
+#            src/s2/s2shapeutil_visit_crossing_edge_pairs.cc
             src/s2/s2text_format.cc
             src/s2/s2wedge_relations.cc
             src/s2/strings/ostringstream.cc
@@ -233,12 +233,12 @@ target_include_directories(s2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 # transitively included by s2 headers we are exporting.
 install(FILES src/s2/_fp_contract_off.h
               src/s2/encoded_s2cell_id_vector.h
-              src/s2/encoded_s2point_vector.h
-              src/s2/encoded_s2shape_index.h
+#              src/s2/encoded_s2point_vector.h
+#              src/s2/encoded_s2shape_index.h
               src/s2/encoded_string_vector.h
               src/s2/encoded_uint_vector.h
               src/s2/id_set_lexicon.h
-              src/s2/mutable_s2shape_index.h
+#              src/s2/mutable_s2shape_index.h
               src/s2/r1interval.h
               src/s2/r2.h
               src/s2/r2rect.h
@@ -271,21 +271,21 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2closest_edge_query_base.h
 #              src/s2/s2closest_point_query.h
 #              src/s2/s2closest_point_query_base.h
-              src/s2/s2contains_point_query.h
-              src/s2/s2contains_vertex_query.h
-              src/s2/s2convex_hull_query.h
+#              src/s2/s2contains_point_query.h
+#              src/s2/s2contains_vertex_query.h
+#              src/s2/s2convex_hull_query.h
               src/s2/s2coords_internal.h
               src/s2/s2coords.h
-              src/s2/s2crossing_edge_query.h
+#              src/s2/s2crossing_edge_query.h
               src/s2/s2debug.h
               src/s2/s2distance_target.h
 #              src/s2/s2earth.h
-              src/s2/s2edge_clipping.h
-              src/s2/s2edge_crosser.h
-              src/s2/s2edge_crossings.h
-              src/s2/s2edge_distances.h
-              src/s2/s2edge_tessellator.h
-              src/s2/s2edge_vector_shape.h
+#              src/s2/s2edge_clipping.h
+#              src/s2/s2edge_crosser.h
+#              src/s2/s2edge_crossings.h
+#              src/s2/s2edge_distances.h
+#              src/s2/s2edge_tessellator.h
+#              src/s2/s2edge_vector_shape.h
               src/s2/s2error.h
 #              src/s2/s2furthest_edge_query.h
               src/s2/s2latlng.h
@@ -296,10 +296,10 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2lax_polyline_shape.h
 #              src/s2/s2loop.h
 #              src/s2/s2loop_measures.h
-              src/s2/s2measures.h
-              src/s2/s2metrics.h
-              src/s2/s2max_distance_targets.h
-              src/s2/s2min_distance_targets.h
+#              src/s2/s2measures.h
+#              src/s2/s2metrics.h
+#              src/s2/s2max_distance_targets.h
+#              src/s2/s2min_distance_targets.h
               src/s2/s2padded_cell.h
 #              src/s2/s2point.h
 #              src/s2/s2point_vector_shape.h
@@ -313,31 +313,31 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2polyline_alignment.h
 #              src/s2/s2polyline_measures.h
 #              src/s2/s2polyline_simplifier.h
-              src/s2/s2predicates.h
-              src/s2/s2projections.h
-              src/s2/s2r2rect.h
+#              src/s2/s2predicates.h
+#              src/s2/s2projections.h
+#              src/s2/s2r2rect.h
 #              src/s2/s2region.h
 #              src/s2/s2region_term_indexer.h
 #              src/s2/s2region_coverer.h
 #              src/s2/s2region_intersection.h
 #              src/s2/s2region_union.h
-              src/s2/s2shape.h
-              src/s2/s2shape_index.h
-              src/s2/s2shape_index_buffered_region.h
-              src/s2/s2shape_index_region.h
-              src/s2/s2shape_measures.h
-              src/s2/s2shapeutil_build_polygon_boundaries.h
-              src/s2/s2shapeutil_coding.h
-              src/s2/s2shapeutil_contains_brute_force.h
-              src/s2/s2shapeutil_count_edges.h
-              src/s2/s2shapeutil_edge_iterator.h
-              src/s2/s2shapeutil_get_reference_point.h
-              src/s2/s2shapeutil_range_iterator.h
-              src/s2/s2shapeutil_shape_edge.h
-              src/s2/s2shapeutil_shape_edge_id.h
-              src/s2/s2shapeutil_testing.h
-              src/s2/s2shapeutil_visit_crossing_edge_pairs.h
-              src/s2/s2testing.h
+#              src/s2/s2shape.h
+#              src/s2/s2shape_index.h
+#              src/s2/s2shape_index_buffered_region.h
+#              src/s2/s2shape_index_region.h
+#              src/s2/s2shape_measures.h
+#              src/s2/s2shapeutil_build_polygon_boundaries.h
+#              src/s2/s2shapeutil_coding.h
+#              src/s2/s2shapeutil_contains_brute_force.h
+#              src/s2/s2shapeutil_count_edges.h
+#              src/s2/s2shapeutil_edge_iterator.h
+#              src/s2/s2shapeutil_get_reference_point.h
+#              src/s2/s2shapeutil_range_iterator.h
+#              src/s2/s2shapeutil_shape_edge.h
+#              src/s2/s2shapeutil_shape_edge_id.h
+#              src/s2/s2shapeutil_testing.h
+#              src/s2/s2shapeutil_visit_crossing_edge_pairs.h
+#              src/s2/s2testing.h
               src/s2/s2text_format.h
               src/s2/s2wedge_relations.h
               src/s2/sequence_lexicon.h
