@@ -139,9 +139,9 @@ add_library(s2
             src/s2/s2cell_index.cc
             src/s2/s2cell_union.cc
             src/s2/s2centroids.cc
-            src/s2/s2closest_cell_query.cc
-            src/s2/s2closest_edge_query.cc
-            src/s2/s2closest_point_query.cc
+#            src/s2/s2closest_cell_query.cc
+#            src/s2/s2closest_edge_query.cc
+#            src/s2/s2closest_point_query.cc
             src/s2/s2contains_vertex_query.cc
             src/s2/s2convex_hull_query.cc
             src/s2/s2coords.cc
@@ -265,12 +265,12 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2cell_index.h
               src/s2/s2cell_union.h
               src/s2/s2centroids.h
-              src/s2/s2closest_cell_query.h
-              src/s2/s2closest_cell_query_base.h
-              src/s2/s2closest_edge_query.h
-              src/s2/s2closest_edge_query_base.h
-              src/s2/s2closest_point_query.h
-              src/s2/s2closest_point_query_base.h
+#              src/s2/s2closest_cell_query.h
+#              src/s2/s2closest_cell_query_base.h
+#              src/s2/s2closest_edge_query.h
+#              src/s2/s2closest_edge_query_base.h
+#              src/s2/s2closest_point_query.h
+#              src/s2/s2closest_point_query_base.h
               src/s2/s2contains_point_query.h
               src/s2/s2contains_vertex_query.h
               src/s2/s2convex_hull_query.h

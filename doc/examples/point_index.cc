@@ -17,6 +17,12 @@ static S2CellId GetCellId(double lat_degrees, double lng_degrees) {
 }
 
 int main (int argc, char *argv[]) { 
-  GetCellId(37.7539498,-122.4076829);
+  S2CellId id = GetCellId(37.7539498,-122.4076829);
+  S2CellId neighbors[4];
+  id.GetEdgeNeighbors(neighbors);
+  std::cout<<"neighbors : "<<std::endl;
+  for (int i =0; i < 4;++i)  {
+  	std::cout<<std::hex<<neighbors[i].id()<<std::endl;
+  }
   return 0;
 }
