@@ -113,7 +113,7 @@ add_library(s2
             src/s2/base/stringprintf.cc
             src/s2/base/strtoint.cc
             src/s2/encoded_s2cell_id_vector.cc
-            src/s2/encoded_s2point_vector.cc
+#            src/s2/encoded_s2point_vector.cc
             src/s2/encoded_s2shape_index.cc
             src/s2/encoded_string_vector.cc
             src/s2/id_set_lexicon.cc
@@ -147,14 +147,14 @@ add_library(s2
             src/s2/s2coords.cc
             src/s2/s2crossing_edge_query.cc
             src/s2/s2debug.cc
-            src/s2/s2earth.cc
+#            src/s2/s2earth.cc
             src/s2/s2edge_clipping.cc
             src/s2/s2edge_crosser.cc
             src/s2/s2edge_crossings.cc
             src/s2/s2edge_distances.cc
             src/s2/s2edge_tessellator.cc
             src/s2/s2error.cc
-            src/s2/s2furthest_edge_query.cc
+#            src/s2/s2furthest_edge_query.cc
             src/s2/s2latlng.cc
             src/s2/s2latlng_rect.cc
             src/s2/s2latlng_rect_bounder.cc
@@ -168,9 +168,9 @@ add_library(s2
             src/s2/s2max_distance_targets.cc
             src/s2/s2min_distance_targets.cc
             src/s2/s2padded_cell.cc
-            src/s2/s2point_compression.cc
-            src/s2/s2point_region.cc
-            src/s2/s2pointutil.cc
+#            src/s2/s2point_compression.cc
+#            src/s2/s2point_region.cc
+#            src/s2/s2pointutil.cc
 #            src/s2/s2polygon.cc
 #            src/s2/s2polyline.cc
 #            src/s2/s2polyline_alignment.cc
@@ -279,7 +279,7 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2crossing_edge_query.h
               src/s2/s2debug.h
               src/s2/s2distance_target.h
-              src/s2/s2earth.h
+#              src/s2/s2earth.h
               src/s2/s2edge_clipping.h
               src/s2/s2edge_crosser.h
               src/s2/s2edge_crossings.h
@@ -287,7 +287,7 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2edge_tessellator.h
               src/s2/s2edge_vector_shape.h
               src/s2/s2error.h
-              src/s2/s2furthest_edge_query.h
+#              src/s2/s2furthest_edge_query.h
               src/s2/s2latlng.h
               src/s2/s2latlng_rect.h
               src/s2/s2latlng_rect_bounder.h
@@ -301,13 +301,13 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2max_distance_targets.h
               src/s2/s2min_distance_targets.h
               src/s2/s2padded_cell.h
-              src/s2/s2point.h
-              src/s2/s2point_vector_shape.h
-              src/s2/s2point_compression.h
-              src/s2/s2point_index.h
-              src/s2/s2point_region.h
-              src/s2/s2point_span.h
-              src/s2/s2pointutil.h
+#              src/s2/s2point.h
+#              src/s2/s2point_vector_shape.h
+#              src/s2/s2point_compression.h
+#              src/s2/s2point_index.h
+#              src/s2/s2point_region.h
+#              src/s2/s2point_span.h
+#              src/s2/s2pointutil.h
 #              src/s2/s2polygon.h
 #              src/s2/s2polyline.h
 #              src/s2/s2polyline_alignment.h
