@@ -33,7 +33,7 @@ option(BUILD_SHARED_LIBS "Build shared libraries instead of static." OFF)
 add_feature_info(SHARED_LIBS BUILD_SHARED_LIBS
                  "builds shared libraries instead of static.")
 
-option(BUILD_EXAMPLES "Build s2 documentation examples." OFF)
+option(BUILD_EXAMPLES "Build s2 documentation examples." ON)
 
 feature_summary(WHAT ALL)
 
@@ -425,9 +425,7 @@ install(FILES src/s2/util/units/length-units.h
         DESTINATION include/s2/util/units)
 
 
-if (BUILD_EXAMPLES)
-  add_subdirectory("doc/examples" examples)
-endif()
+add_subdirectory("doc/examples" examples)
 
 #if (${SWIG_FOUND} AND ${Python3_FOUND})
 #  add_subdirectory("src/python" python)
