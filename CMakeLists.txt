@@ -134,9 +134,9 @@ add_library(s2
 #            src/s2/s2builderutil_s2polyline_vector_layer.cc
 #            src/s2/s2builderutil_snap_functions.cc
 #            src/s2/s2cap.cc
-            src/s2/s2cell.cc
+#            src/s2/s2cell.cc
             src/s2/s2cell_id.cc
-            src/s2/s2cell_index.cc
+#            src/s2/s2cell_index.cc
 #            src/s2/s2cell_union.cc
 #            src/s2/s2centroids.cc
 #            src/s2/s2closest_cell_query.cc
@@ -260,9 +260,9 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2builderutil_snap_functions.h
 #              src/s2/s2builderutil_testing.h
 #              src/s2/s2cap.h
-              src/s2/s2cell.h
+#              src/s2/s2cell.h
               src/s2/s2cell_id.h
-              src/s2/s2cell_index.h
+#              src/s2/s2cell_index.h
 #              src/s2/s2cell_union.h
 #              src/s2/s2centroids.h
 #              src/s2/s2closest_cell_query.h

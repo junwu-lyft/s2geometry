@@ -8,7 +8,7 @@
 #include "s2/s2latlng.h"
 
 
-#include<iostream>
+#include <iostream>
 
 static S2CellId GetCellId(double lat_degrees, double lng_degrees) {
   S2CellId id(S2LatLng::FromDegrees(lat_degrees, lng_degrees));
