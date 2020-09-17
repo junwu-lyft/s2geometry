@@ -122,7 +122,7 @@ add_library(s2
             src/s2/s1angle.cc
             src/s2/s1chord_angle.cc
             src/s2/s1interval.cc
-            src/s2/s2boolean_operation.cc
+#            src/s2/s2boolean_operation.cc
 #            src/s2/s2builder.cc
 #            src/s2/s2builder_graph.cc
 #            src/s2/s2builderutil_closed_set_normalizer.cc
@@ -245,7 +245,7 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s1angle.h
               src/s2/s1chord_angle.h
               src/s2/s1interval.h
-              src/s2/s2boolean_operation.h
+#              src/s2/s2boolean_operation.h
 #              src/s2/s2builder.h
 #              src/s2/s2builder_graph.h
 #              src/s2/s2builder_layer.h
