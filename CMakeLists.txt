@@ -136,6 +136,7 @@ add_library(s2
 #            src/s2/s2cap.cc
 #            src/s2/s2cell.cc
             src/s2/s2cell_id.cc
+            src/s2/s2lite.cc
 #            src/s2/s2cell_index.cc
 #            src/s2/s2cell_union.cc
 #            src/s2/s2centroids.cc
@@ -240,10 +241,10 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/encoded_uint_vector.h
 #              src/s2/id_set_lexicon.h
 #              src/s2/mutable_s2shape_index.h
-              src/s2/r1interval.h
-              src/s2/r2.h
-              src/s2/r2rect.h
-              src/s2/s1angle.h
+#              src/s2/r1interval.h
+#              src/s2/r2.h
+#              src/s2/r2rect.h
+#              src/s2/s1angle.h
 #              src/s2/s1chord_angle.h
 #              src/s2/s1interval.h
 #              src/s2/s2boolean_operation.h
@@ -262,7 +263,8 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2builderutil_testing.h
 #              src/s2/s2cap.h
 #              src/s2/s2cell.h
-              src/s2/s2cell_id.h
+#              src/s2/s2cell_id.h
+              src/s2/s2lite.h
 #              src/s2/s2cell_index.h
 #              src/s2/s2cell_union.h
 #              src/s2/s2centroids.h
@@ -275,8 +277,8 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2contains_point_query.h
 #              src/s2/s2contains_vertex_query.h
 #              src/s2/s2convex_hull_query.h
-              src/s2/s2coords_internal.h
-              src/s2/s2coords.h
+#              src/s2/s2coords_internal.h
+#              src/s2/s2coords.h
 #              src/s2/s2crossing_edge_query.h
 #              src/s2/s2debug.h
 #              src/s2/s2distance_target.h
@@ -289,7 +291,7 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2edge_vector_shape.h
 #              src/s2/s2error.h
 #              src/s2/s2furthest_edge_query.h
-              src/s2/s2latlng.h
+#              src/s2/s2latlng.h
 #              src/s2/s2latlng_rect.h
 #              src/s2/s2latlng_rect_bounder.h
 #              src/s2/s2lax_loop_shape.h
