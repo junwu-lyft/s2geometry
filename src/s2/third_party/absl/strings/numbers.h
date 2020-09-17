@@ -37,6 +37,7 @@
 #include "s2/third_party/absl/numeric/int128.h"
 #include "s2/third_party/absl/strings/string_view.h"
 
+/*
 namespace absl {
 
 // SimpleAtoi()
@@ -72,19 +73,20 @@ ABSL_MUST_USE_RESULT bool SimpleAtod(absl::string_view str, double* value);
 // are interpreted as boolean `false`: "false", "f", "no", "n", "0".
 ABSL_MUST_USE_RESULT bool SimpleAtob(absl::string_view str, bool* value);
 
-}  // namespace absl
+}  // namespace absl*/
 
 // End of public API.  Implementation details follow.
 
 namespace absl {
 namespace numbers_internal {
 
+/*
 // safe_strto?() functions for implementing SimpleAtoi()
 bool safe_strto32_base(absl::string_view text, int32_t* value, int base);
 bool safe_strto64_base(absl::string_view text, int64_t* value, int base);
 bool safe_strtou32_base(absl::string_view text, uint32_t* value, int base);
 bool safe_strtou64_base(absl::string_view text, uint64_t* value, int base);
-
+*/
 static const int kFastToBufferSize = 32;
 static const int kSixDigitsToBufferSize = 16;
 
@@ -129,6 +131,7 @@ char* FastIntToBuffer(int_type i, char* buffer) {
   }
 }
 
+/*
 // Implementation of SimpleAtoi, generalized to support arbitrary base (used
 // with base different from 10 elsewhere in Abseil implementation).
 template <typename int_type>
@@ -165,9 +168,10 @@ ABSL_MUST_USE_RESULT bool safe_strtoi_base(absl::string_view s, int_type* out,
   }
   return parsed;
 }
-
+*/
 }  // namespace numbers_internal
 
+/*
 // SimpleAtoi()
 //
 // Converts a string to an integer, using `safe_strto?()` functions for actual
@@ -178,7 +182,7 @@ ABSL_MUST_USE_RESULT bool safe_strtoi_base(absl::string_view s, int_type* out,
 template <typename int_type>
 ABSL_MUST_USE_RESULT bool SimpleAtoi(absl::string_view s, int_type* out) {
   return numbers_internal::safe_strtoi_base(s, out, 10);
-}
+}*/
 
 }  // namespace absl
 
