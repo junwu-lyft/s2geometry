@@ -111,7 +111,7 @@ include_directories(src)
 
 add_library(s2
             src/s2/base/stringprintf.cc
-            src/s2/base/strtoint.cc
+#            src/s2/base/strtoint.cc
 #            src/s2/encoded_s2cell_id_vector.cc
 #            src/s2/encoded_s2point_vector.cc
 #            src/s2/encoded_s2shape_index.cc
@@ -120,8 +120,8 @@ add_library(s2
 #            src/s2/mutable_s2shape_index.cc
             src/s2/r2rect.cc
             src/s2/s1angle.cc
-            src/s2/s1chord_angle.cc
-            src/s2/s1interval.cc
+#            src/s2/s1chord_angle.cc
+#            src/s2/s1interval.cc
 #            src/s2/s2boolean_operation.cc
 #            src/s2/s2builder.cc
 #            src/s2/s2builder_graph.cc
@@ -146,14 +146,14 @@ add_library(s2
 #            src/s2/s2convex_hull_query.cc
             src/s2/s2coords.cc
 #            src/s2/s2crossing_edge_query.cc
-            src/s2/s2debug.cc
+#            src/s2/s2debug.cc
 #            src/s2/s2earth.cc
 #            src/s2/s2edge_clipping.cc
 #            src/s2/s2edge_crosser.cc
 #            src/s2/s2edge_crossings.cc
 #            src/s2/s2edge_distances.cc
 #            src/s2/s2edge_tessellator.cc
-            src/s2/s2error.cc
+#            src/s2/s2error.cc
 #            src/s2/s2furthest_edge_query.cc
             src/s2/s2latlng.cc
 #            src/s2/s2latlng_rect.cc
@@ -199,25 +199,26 @@ add_library(s2
 #            src/s2/s2wedge_relations.cc
 #            src/s2/strings/ostringstream.cc
 #            src/s2/strings/serialize.cc
-            src/s2/third_party/absl/base/dynamic_annotations.cc
+#            src/s2/third_party/absl/base/dynamic_annotations.cc
             src/s2/third_party/absl/base/internal/raw_logging.cc
             src/s2/third_party/absl/base/internal/throw_delegate.cc
-            src/s2/third_party/absl/numeric/int128.cc
+#            src/s2/third_party/absl/numeric/int128.cc
             src/s2/third_party/absl/strings/ascii.cc
 #            src/s2/third_party/absl/strings/match.cc
             src/s2/third_party/absl/strings/numbers.cc
             src/s2/third_party/absl/strings/str_cat.cc
-            src/s2/third_party/absl/strings/str_split.cc
+#            src/s2/third_party/absl/strings/str_split.cc
 #            src/s2/third_party/absl/strings/string_view.cc
 #            src/s2/third_party/absl/strings/strip.cc
             src/s2/third_party/absl/strings/internal/memutil.cc
 #            src/s2/util/bits/bit-interleave.cc
 #            src/s2/util/bits/bits.cc
             src/s2/util/coding/coder.cc
-            src/s2/util/coding/varint.cc
+#            src/s2/util/coding/varint.cc
 #            src/s2/util/math/exactfloat/exactfloat.cc
 #            src/s2/util/math/mathutil.cc
-            src/s2/util/units/length-units.cc)
+#            src/s2/util/units/length-units.cc
+)
 target_link_libraries(
     s2
     ${GFLAGS_LIBRARIES} ${GLOG_LIBRARIES} ${OPENSSL_LIBRARIES}
@@ -243,8 +244,8 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/r2.h
               src/s2/r2rect.h
               src/s2/s1angle.h
-              src/s2/s1chord_angle.h
-              src/s2/s1interval.h
+#              src/s2/s1chord_angle.h
+#              src/s2/s1interval.h
 #              src/s2/s2boolean_operation.h
 #              src/s2/s2builder.h
 #              src/s2/s2builder_graph.h
@@ -277,7 +278,7 @@ install(FILES src/s2/_fp_contract_off.h
               src/s2/s2coords_internal.h
               src/s2/s2coords.h
 #              src/s2/s2crossing_edge_query.h
-              src/s2/s2debug.h
+#              src/s2/s2debug.h
 #              src/s2/s2distance_target.h
 #              src/s2/s2earth.h
 #              src/s2/s2edge_clipping.h
@@ -286,7 +287,7 @@ install(FILES src/s2/_fp_contract_off.h
 #              src/s2/s2edge_distances.h
 #              src/s2/s2edge_tessellator.h
 #              src/s2/s2edge_vector_shape.h
-              src/s2/s2error.h
+#              src/s2/s2error.h
 #              src/s2/s2furthest_edge_query.h
               src/s2/s2latlng.h
 #              src/s2/s2latlng_rect.h
@@ -359,7 +360,7 @@ install(FILES src/s2/third_party/absl/algorithm/algorithm.h
 install(FILES src/s2/third_party/absl/base/attributes.h
               src/s2/third_party/absl/base/casts.h
               src/s2/third_party/absl/base/config.h
-              src/s2/third_party/absl/base/dynamic_annotations.h
+#              src/s2/third_party/absl/base/dynamic_annotations.h
               src/s2/third_party/absl/base/log_severity.h
               src/s2/third_party/absl/base/macros.h
               src/s2/third_party/absl/base/optimization.h
